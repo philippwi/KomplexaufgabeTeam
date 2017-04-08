@@ -1,5 +1,6 @@
 
-public class Main {
+public class Testing {
+    //zum testen der Algorithmen in der Konsole
 
     //Testmethoden:
 
@@ -28,7 +29,7 @@ public class Main {
         System.out.println("epsilon: " + stats.epsilon);
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         //   printSpiral(99);
 
