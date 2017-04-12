@@ -1,12 +1,13 @@
+import org.junit.jupiter.api.Test;
 
 public class Testing {
     //zum testen der Algorithmen in der Konsole
 
     //Testmethoden:
 
-    public static void printSpiral(int size) {//Ausgabe ab 100 unschön, muss aber eh in Grid
+    void printSpiral(int size) {//Ausgabe ab 100 unschön
 
-        UnamSpiral u = new UnamSpiral(size);
+        UlamSpiral u = new UlamSpiral(size);
 
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 100; j++) {
@@ -18,7 +19,7 @@ public class Testing {
         }
     }
 
-    public static void printStats(int range) {
+    void printStats(int range) {
         Statistics stats = new Statistics(range);
         System.out.println("range: " + range);
         System.out.println("number of primes: " + stats.numberOfPrimes);
@@ -29,10 +30,12 @@ public class Testing {
         System.out.println("epsilon: " + stats.epsilon);
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
-        //   printSpiral(99);
+        printSpiral(99);
 
-        printStats(100);
+        printStats(99);
+
     }
 }

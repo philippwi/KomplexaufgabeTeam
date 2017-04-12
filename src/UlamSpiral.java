@@ -1,6 +1,6 @@
-public class UnamSpiral {
+public class UlamSpiral {
 
-    public Number[][] spiral = new Number[100][100]; //Basisgröße 100x100
+    public SpiralNumber[][] spiral = new SpiralNumber[100][100]; //Basisgröße 100x100
 
     public int maximumIndex;
 
@@ -8,7 +8,7 @@ public class UnamSpiral {
         UP, DOWN, LEFT, RIGHT
     }
 
-    public UnamSpiral(int x){
+    public UlamSpiral(int x){
         this.maximumIndex = x;
         fill(this.maximumIndex);
     }
@@ -17,12 +17,12 @@ public class UnamSpiral {
         if(valueAmount==0) return;
         direction dir = direction.DOWN;
         int value = 1;
-        int x = 49; //49/48 ist die Position der 1 (Startposition der Spirale)
-        int y = 48;
+        int x = 50; //50/49 ist die Position der 1 (Startposition der Spirale)
+        int y = 49;
 
         while(value<=valueAmount) {
 
-            spiral[x][y] = new Number(value);
+            spiral[x][y] = new SpiralNumber(value);
             value++;
 
             switch (dir) {
